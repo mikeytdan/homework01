@@ -236,6 +236,7 @@ textarea {
     float: left;
     margin-right: 30px;
     margin-bottom: 30px;
+    clear: both;
 }
 
 .clearfix::after {
@@ -247,10 +248,27 @@ textarea {
 .grid {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, 140px);
+    grid-template-columns: repeat(auto-fill, 170px);
     margin-bottom: 10px;
 }
 
-.grid>* {
+.portfolio-image {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
     border-radius: 8px;
+    float: left;
+    z-index: 1;
+    position: relative;
+    margin: 0px 20px 20px 0px;
+}
+
+.portfolio-image-label {
+    position: absolute;
+    /* float: left; */
+    background-color: var(--accent-color);
+    color: var(--cool-color);
+    width: 170px;
+    height: 50px;
+    z-index: 500;
 }
